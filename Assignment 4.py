@@ -14,11 +14,18 @@ else:
     print("Your Grade is A")
 
 #Question 2
-Year=int(input("Enter the Year:"))
-if Year%4==0 and Year%100==0 and Year%400==0:
-    print("This year is a leap year")
+year=int(input("Enter the year: "))
+
+if year%4==0:
+    if year%100==0:
+        if year%400==0:
+            print(f"{year} is a leap year")
+        else:
+            print(f"{year} is not a leap year")
+    else:
+        print(f"{year} is a leap year")
 else:
-    print("This year is not a leap year")
+    print(f"{year} is not a leap year")
 
 #Question 3
 import random
